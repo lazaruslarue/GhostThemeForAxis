@@ -2,7 +2,7 @@
    Casper Starter - Add you custom CSS here
    ========================================================================== */
 html {
-  font-family: Lato, sans-serif !important; 
+  font-family: Lato, sans-serif !important;
   background-color: black;
 }
 /* fix because giant images */
@@ -197,7 +197,7 @@ img {max-width: 100%;}
 }
 .share-segment {
   padding-top: 2rem;
-  justify-content: center;
+  justify-content: space-around;
   flex: 1 100%;
   flex-flow: row;
 }
@@ -214,12 +214,30 @@ img {max-width: 100%;}
   flex-wrap: wrap;
   justify-content: center;
 
+  flex: 1 100%;
+
+  @media all and (min-width: 600px) {
+    flex: 1 2 35%;
+  }
+
   padding: .5rem;
+
   p {
     text-align: center;
+    margin: 0rem 1rem 0rem 1rem;
   }
-  label {
-
+  .label {
+    font-size: larger;
+    font-weight: 700;
+  }
+  .title {
+    font-style: italic;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    line-height: 1.4rem;
+  }
+  .addy {
+    font-size: smaller;
   }
 }
 
