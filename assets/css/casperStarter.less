@@ -6,7 +6,10 @@ html {
   background-color: black;
 }
 /* fix because giant images */
-img {max-width: 100%;}
+img {
+  max-height: 100%;
+  max-width: 100%;
+}
 
 /* flex */
 .flexbox {
@@ -33,7 +36,6 @@ img {max-width: 100%;}
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-
   -webkit-flex-flow: row wrap;
   flex-flow: row wrap;
 
@@ -67,6 +69,7 @@ img {max-width: 100%;}
   height: 360px;
 
   iframe {
+    // can we twerk the iframe max width here?
     margin: 0;
   }
 }
@@ -79,11 +82,8 @@ img {max-width: 100%;}
     flex: 2 1 25%;
     padding: 1em 2em;
   }
-  img {
-  }
   .pair-image {
     flex: 2 1 25%;
-
   }
   .left {
     order: -1;
@@ -243,4 +243,21 @@ img {max-width: 100%;}
 
 .share-social {
   height: 10em;
+}
+
+.post-excerpt {
+  flex-direction: row wrap;
+
+  .text {
+    flex: 1 2 55%;
+    padding-right: 0.4rem;
+  }
+  .image {
+    flex: 1 29%;
+    media all and (min-width: 600px) {
+      img {
+        max-height: 20rem;
+      }
+    }
+  }
 }

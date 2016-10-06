@@ -3,17 +3,22 @@
     {{pagination}}
 </div>
 {{! This is the post loop - each post will be output using this markup }}
-{{#foreach posts}}
-<article class="{{post_class}}">
-    <header class="post-header">
-        <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p>{{excerpt words="26"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
-        <img src="{{image}}" alt="" />
-    </section>
-</article>
-{{/foreach}}
+<div class="flexbox row loop">
 
-{{! Previous/next page links - displayed on every page }}
+  {{#foreach posts}}
+  <article class="{{post_class}}">
+    <header class="post-header">
+      <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+    </header>
+    <section class="flexbox row post-excerpt">
+      <p class="text">{{excerpt words="26"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
+      <div class="image">
+        <img src="{{image}}" />
+      </div>
+    </section>
+  </article>
+  {{/foreach}}
+
+  {{! Previous/next page links - displayed on every page }}
+</div>
 {{pagination}}
