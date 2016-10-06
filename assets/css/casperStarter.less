@@ -245,16 +245,26 @@ img {
   height: 10em;
 }
 
+
+.post-title {
+  a {
+    color: white;
+  }
+}
 .post-excerpt {
   flex-direction: row wrap;
-
   .text {
     flex: 1 2 55%;
+
+    @media all and (max-width: 600px) {
+      flex: 1 100%;
+    }
     padding-right: 0.4rem;
+    color: white;
   }
   .image {
     flex: 1 29%;
-    media all and (min-width: 600px) {
+    @media all and (min-width: 600px) {
       img {
         max-height: 20rem;
       }
