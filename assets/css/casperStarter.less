@@ -5,6 +5,8 @@ html {
   font-family: Lato, sans-serif;
   background-color: black;
 }
+/* fix because giant images */
+img {max-width: 100%;}
 
 /* flex */
 .flexbox {
@@ -76,17 +78,13 @@ html {
   .pair-content {
     flex: 2 1 25%;
     padding: 1em 2em;
-    // p:first-child {
-    //
-    // }
   }
   img {
   }
   .pair-image {
     flex: 2 1 25%;
-    // margin: 10em 0 10em 0;
-  }
 
+  }
   .left {
     order: -1;
     margin: 10em 4em 10em 0;
