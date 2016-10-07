@@ -10,6 +10,55 @@ img {
   max-height: 100%;
   max-width: 100%;
 }
+/* buy button */
+// button colors
+@buy-yellow: hsla(53, 69%, 60%, .9);
+@button-background: hsla(43, 96%, 8%, 0.78);
+@order-button-font: 700 2.4em 'Open Sans', sans-serif;
+.paypal {
+  text-align: center;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+input.btn {
+  border-radius: 5px;
+  box-shadow: 1px 1px 20px 3px hsla(0, 0%, 0%, .6);
+  padding: 0.5em;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 hsla(0, 0%, 0%, .25);
+  font: @order-button-font;
+  letter-spacing: 2px;
+  color: @buy-yellow;
+  background: @button-background;
+  cursor: pointer;
+}
+input, textarea {
+  /*
+  // stop safari from giving input buttons
+   http://stackoverflow.com/questions/5263260/stop-safari-mobile-from-giving-input-buttons-rounded-corners#5263502
+  */
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+}
+
+.anim {
+  animation: jiggle 4s ease-in infinite;
+}
+
+@keyframes jiggle {
+  48%, 62% {
+    transform: scale(1.0, 1.0)
+  }
+  50% {
+    transform: scale(0.99, 0.95)
+  }
+  56% {
+    transform: scale(1.01, 1.05) translate(0, -6px)
+  }
+  59% {
+    transform: scale(1.0, 1.0) translate(0, -6px)
+  }
+}
 
 /* flex */
 .flexbox {
