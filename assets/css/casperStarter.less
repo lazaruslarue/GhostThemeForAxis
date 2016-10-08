@@ -105,18 +105,14 @@ input, textarea {
   margin-bottom: 0;
 
   .inner {
-    width: 100%;
-    position: absolute;
-    top: 20%;
-    max-width: none;
+    padding-top: 15%;
+
+    @media only screen and (orientation: landscape) and (max-width: 750px) {
+      padding-top: 0;
+    }
   }
 
   h1 {
-    width: 100%;
-    text-align: center;
-    padding: 0 15% 0 15%;
-    box-sizing: border-box;
-
     @media only screen and (max-width: 900px) {
       font-size: 4rem;
     }
@@ -137,6 +133,8 @@ input, textarea {
   padding-bottom: 56.25%;
   padding-top: 35px;
   height: 0;
+  max-width: 75%;
+  margin: 0 auto;
 
   iframe {
     // can we twerk the iframe max width here?
@@ -146,6 +144,7 @@ input, textarea {
     left: 0;
     width: 100%;
     height: 100%;
+    margin: 0;
   }
 }
 
@@ -169,7 +168,10 @@ input, textarea {
 /* section heading partial */
 .section-heading {
   text-align: center;
-  font-size: 3rem;
+  font-size: 2rem;
+  @media all and (min-width: 600px) {
+    font-size: 3rem;
+  }
   padding: 1em;
   background: tomato;
   text-transform: uppercase;
@@ -180,7 +182,7 @@ input, textarea {
 /* testimonial_loop partial */
 .testimonial_loop {
   background-color: black;
-  height:90vh;
+  min-height:90vh;
 }
 
 .testimonial {
@@ -209,17 +211,23 @@ input, textarea {
 
     line-height: 1.2;
 
-    p {
-      font-size: 2rem;
-      color: black;
+    font-size: 2rem;
+    color: black;
+
+    @media only screen and (max-width: 900px) {
+      font-size: 1.5rem;
     }
+    @media only screen and (max-width: 500px) {
+      font-size: 1.2rem;
+    }
+
     p:nth-last-child(2) {
-      font-size: 1.6rem;
+      font-size: 0.8em;
       margin: 0;
     }
     p:last-child {
       margin: 0;
-      font-size: 1.3rem;
+      font-size: 0.6em;
     }
   }
 }
@@ -242,7 +250,10 @@ input, textarea {
   }
 
   a {
-    font-size: 3rem;
+    font-size: 2rem;
+    @media all and (min-width: 600px) {
+      font-size: 3rem;
+    }
     text-transform: capitalize;
     text-decoration: none;
     display: block;
